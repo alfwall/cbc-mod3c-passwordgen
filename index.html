@@ -25,24 +25,25 @@
 
         <div class="password-gen-options">
           <div class="single-option slider">
-            <input type="range" min="8" , max="128" value="16" class="slider" id="password-length">
+            <input type="range" min="8" , max="128" value="16" class="slider" id="password-length"
+              oninput="writePassword()" onchange="writePassword()">
             <p>Length: <span id="selected-password-length"></span></p>
           </div>
           <div class="single-option">
-            <input type="checkbox" id="use-lowercase" onclick="CheckUncheck('lowercase')" checked />
+            <input type="checkbox" id="use-lowercase" onclick="writePassword()" checked />
             <label for="use-lowercase">use lowercase</label>
           </div>
           <div class="single-option">
-            <input type="checkbox" id="use-uppercase" onclick="CheckUncheck('uppercase')" checked />
+            <input type="checkbox" id="use-uppercase" onclick="writePassword()" checked />
             <label for="use-uppercase">USE UPPERCASE</label>
           </div>
           <div class="single-option">
-            <input type="checkbox" id="use-numbers" onclick="CheckUncheck('numbers')" checked />
+            <input type="checkbox" id="use-numbers" onclick="writePassword()" checked />
             <label for="use-numbers">u23 num83r2</label>
           </div>
           <div class="single-option">
-            <input type="checkbox" id="use-special-chars" onclick="CheckUncheck('special')" checked />
-            <label for="use-special-chars">use lowercase</label>
+            <input type="checkbox" id="use-special-chars" onclick="writePassword()" checked />
+            <label for="use-special-chars">use special chars</label>
           </div>
         </div>
 
@@ -50,6 +51,7 @@
 
       <div class="card-footer">
         <button id="generate" class="btn">Generate Password</button>
+        <span id="hidden-warning-text" hidden>You need to choose SOMETHING!</span>
       </div>
     </div>
 

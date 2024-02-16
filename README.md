@@ -4,17 +4,17 @@
 Implements a password generator that takes options such as length and character type selection.
 
 ## TODO
-- [ ] Present criteria prompts when button is pressed.
+- [x] Present criteria prompts when button is pressed.
 - [x] Include password length selection, ranging from 8 to 128 characters.
-- [ ] Include checkboxes with options such as...
+- [x] Include checkboxes with options such as...
     - [x] Lowercase letters (default to TRUE)
     - [x] Uppercase letters (default to TRUE)
     - [x] Numbers (default to TRUE)
     - [x] Special Characters (default to TRUE)
-- [ ] Validation that REQUIRES at least 1 of those 4 options be checked. Refuse to uncheck if there's only 1 checkbox left.
-- [ ] Whenever a checkbox changes values, generate a new password based on the new selection.
-- [ ] Write password to screen.
-- [ ] Copy the password to the clipboard?
+- [x] Validation that REQUIRES at least 1 of those 4 options be checked. Refuse to uncheck if there's only 1 checkbox left.
+- [x] Whenever a checkbox changes values, generate a new password based on the new selection.
+- [x] Write password to screen.
+- [ ] Hide the password options at first, and reveal forever after when button is pressed.
 
 
 

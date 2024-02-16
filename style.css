@@ -59,15 +59,18 @@ header {
 .password-gen-options {
   text-align: center;
 }
-
 /* Each password option has an <input> and <label> or some text nearby. Align them left.*/
 .single-option {
- text-align: center;
- margin: 10px;
+  text-align: center;
+  margin: 10px;
 }
-
-
-
+/* If no character options are checked, this red warning text is revealed. */
+#hidden-warning-text {
+  color: red;
+  font-size: 14;
+  font-family: sans-serif;
+  font-weight: bold;
+}
 
 
 
