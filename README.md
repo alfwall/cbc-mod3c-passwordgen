@@ -6,7 +6,7 @@ Implements a password generator that takes options such as length and character 
 ## The Result
 [Click here!](https://alfwall.github.io/reasonable-password-generator/)
 
-![Screenshot of the password generator in action.](./assets/images/deployed-password-gen-screenshot.png)
+![Screenshot of the password generator in action.](./deployed-password-gen-screenshot.png)
 
 
 ## TODO
