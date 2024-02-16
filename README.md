@@ -5,15 +5,14 @@ Implements a password generator that takes options such as length and character 
 
 ## TODO
 - [ ] Present criteria prompts when button is pressed.
-- [ ] Include password length selection, ranging from 8 to 128 characters.
+- [x] Include password length selection, ranging from 8 to 128 characters.
 - [ ] Include checkboxes with options such as...
-    - [ ] Lowercase letters (default to TRUE)
-    - [ ] Uppercase letters (default to TRUE)
-    - [ ] Numbers (default to TRUE)
-    - [ ] Special Characters (default to TRUE)
+    - [x] Lowercase letters (default to TRUE)
+    - [x] Uppercase letters (default to TRUE)
+    - [x] Numbers (default to TRUE)
+    - [x] Special Characters (default to TRUE)
 - [ ] Validation that REQUIRES at least 1 of those 4 options be checked. Refuse to uncheck if there's only 1 checkbox left.
 - [ ] Whenever a checkbox changes values, generate a new password based on the new selection.
-- [ ] Include a button to shuffle passwords with the same checkbox selections?
 - [ ] Write password to screen.
 - [ ] Copy the password to the clipboard?
 

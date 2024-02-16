@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+
+      <div class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+
+        <div class="password-gen-options">
+          <div class="single-option slider">
+            <input type="range" min="8" , max="128" value="16" class="slider" id="password-length">
+            <p>Length: <span id="selected-password-length"></span></p>
+          </div>
+          <div class="single-option">
+            <input type="checkbox" id="use-lowercase" onclick="CheckUncheck('lowercase')" checked />
+            <label for="use-lowercase">use lowercase</label>
+          </div>
+          <div class="single-option">
+            <input type="checkbox" id="use-uppercase" onclick="CheckUncheck('uppercase')" checked />
+            <label for="use-uppercase">USE UPPERCASE</label>
+          </div>
+          <div class="single-option">
+            <input type="checkbox" id="use-numbers" onclick="CheckUncheck('numbers')" checked />
+            <label for="use-numbers">u23 num83r2</label>
+          </div>
+          <div class="single-option">
+            <input type="checkbox" id="use-special-chars" onclick="CheckUncheck('special')" checked />
+            <label for="use-special-chars">use lowercase</label>
+          </div>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+
+      </div>
+
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
