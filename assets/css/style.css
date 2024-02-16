@@ -1,9 +1,11 @@
+/* For all elements, include margin and padding when measuring width and height. */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Use maximum amount of vertical space on the page. */
 html,
 body,
 .wrapper {
@@ -12,17 +14,20 @@ body,
   padding: 0;
 }
 
+/* White background, sans-serif font. */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* Some generous padding around the generator. */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/* Equivalent of h1 element. */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +35,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Equivalent of the body element. Subtle box-shadow around the border. */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +48,7 @@ header {
   padding: 30px 40px;
 }
 
+/* Equivalent of h2 element within the body. */
 .card-header::after {
   content: " ";
   display: block;
@@ -50,6 +57,7 @@ header {
   height: 2px;
 }
 
+/* Maintain a minimum height for the generator. */
 .card-body {
   min-height: 100px;
 }
@@ -59,11 +67,13 @@ header {
 #password-gen-options {
   text-align: center;
 }
+
 /* Each password option has an <input> and <label> or some text nearby. Align them left.*/
 .single-option {
   text-align: center;
   margin: 10px;
 }
+
 /* If no character options are checked, this red warning text is revealed. */
 #hidden-warning-text {
   color: red;
@@ -74,10 +84,12 @@ header {
 
 
 
+/* Equivalent of footer element, contains the Generate Password button. */
 .card-footer {
   text-align: center;
 }
 
+/* Some spacing before the footer. */
 .card-footer::before {
   content: " ";
   display: block;
@@ -86,12 +98,14 @@ header {
   height: 2px;
 }
 
+/* Some spacing after the footer. */
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/* Styling of the Generate Password button. White font on Red bg, rounded edges. */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -107,15 +121,18 @@ header {
   cursor: pointer;
 }
 
+/* When the button is disabled, change its color and ignore the mouse/cursor hovering. */
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
 
+/* Helper class to float stuff to the right. */
 .float-right {
   float: right;
 }
 
+/* The box containing generated passwords. Spacious, mostly empty. */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -137,19 +154,26 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Smaller screens: */
 @media (max-width: 690px) {
+
+  /* Shrink the button some. */
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
 
+  /* Shrink the password output some. */
   #password {
     font-size: 1rem;
   }
 }
 
+/* Even smaller screens: */
 @media (max-width: 500px) {
+
+  /* Shrink the button a lot! */
   .btn {
     font-size: 0.8rem;
   }
