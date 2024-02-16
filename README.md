@@ -1,7 +1,13 @@
-# Password Generator Starter Code
+# Password Generator 
 
 ## Description
 Implements a password generator that takes options such as length and character type selection.
+
+## The Result
+[Click here!](https://alfwall.github.io/reasonable-password-generator/)
+
+![Screenshot of the password generator in action.](./assets/images/deployed-password-gen-screenshot.png)
+
 
 ## TODO
 - [x] Present criteria prompts when button is pressed.
@@ -14,7 +20,7 @@ Implements a password generator that takes options such as length and character 
 - [x] Validation that REQUIRES at least 1 of those 4 options be checked. Refuse to uncheck if there's only 1 checkbox left.
 - [x] Whenever a checkbox changes values, generate a new password based on the new selection.
 - [x] Write password to screen.
-- [ ] Hide the password options at first, and reveal forever after when button is pressed.
+- [x] Hide the password options at first, and reveal forever after when button is pressed.
 
 
 

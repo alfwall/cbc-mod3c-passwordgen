@@ -56,7 +56,7 @@ header {
 
 
 /* Contains all the options. Centered. */
-.password-gen-options {
+#password-gen-options {
   text-align: center;
 }
 /* Each password option has an <input> and <label> or some text nearby. Align them left.*/
@@ -71,7 +71,6 @@ header {
   font-family: sans-serif;
   font-weight: bold;
 }
-
 
 
 

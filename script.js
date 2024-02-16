@@ -11,22 +11,21 @@ lengthSlider.oninput = function () {
 
 // The final result comes outta here.
 function generatePassword() {
+  // If the options aren't visible yet, reveal!!
+  document.getElementById("password-gen-options").removeAttribute("hidden");
   // Check the booleans for each checkbox
   isLowercaseChecked = document.getElementById('use-lowercase').checked;
   isUppercaseChecked = document.getElementById('use-uppercase').checked;
   isNumbersChecked = document.getElementById('use-numbers').checked;
   isSpecialCharsChecked = document.getElementById('use-special-chars').checked;
 
+  // If there aren't any checked boxes, disable the button and reveal the warning!
   if (!isLowercaseChecked && !isUppercaseChecked && !isNumbersChecked && !isSpecialCharsChecked) {
-    // bad! no! disable the button
-    console.log("Bad! No! Choose SOMETHING!")
     document.getElementById("generate").disabled = true;
     document.getElementById("hidden-warning-text").removeAttribute("hidden");
-    // Then return
-    return;
+    return "";
   }
-  // Ensure the generate button is enabled
-  console.log("Good, enable things.")
+  // Ensure the generate button is enabled, and the warning is hidden
   document.getElementById("generate").disabled = false;
   document.getElementById("hidden-warning-text").setAttribute("hidden", "hidden");
 
@@ -45,15 +44,10 @@ function generatePassword() {
     charactersToUse += "!@#%^&*-_.?";
   }
 
-  if (charactersToUse.length === 0) {
-    console.log("Wait, how'd you manage that? This felt right to include, just in case.")
-    return;
-  }
-
+  // Loop PASSWORD_LENGTH times, randomly selecting selected characters.
   output = "";
   var passLength = document.getElementById("password-length").value;
   var i = 0;
-
   for (var i = 0; i < passLength; i++) {
     output += charactersToUse.charAt(Math.floor(Math.random() * charactersToUse.length));
   }

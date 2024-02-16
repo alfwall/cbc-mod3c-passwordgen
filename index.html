@@ -14,48 +14,47 @@
     <header>
       <h1>Password Generator</h1>
     </header>
-
     <div class="card">
       <div class="card-header">
         <h2>Generate a Password</h2>
       </div>
-
       <div class="card-body">
         <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
-
-        <div class="password-gen-options">
+        <!-- The password options elements, hidden until the generate button is first clicked. -->
+        <div id="password-gen-options" hidden>
           <div class="single-option slider">
+            <!-- Password length  -->
             <input type="range" min="8" , max="128" value="16" class="slider" id="password-length"
               oninput="writePassword()" onchange="writePassword()">
             <p>Length: <span id="selected-password-length"></span></p>
           </div>
           <div class="single-option">
+            <!-- Whether to use abcdefghijklmnopqrstuvwxyz -->
             <input type="checkbox" id="use-lowercase" onclick="writePassword()" checked />
             <label for="use-lowercase">use lowercase</label>
           </div>
           <div class="single-option">
+            <!-- Whether to use ABCDEFGHIJKLMNOPQRSTUVWXYZ -->
             <input type="checkbox" id="use-uppercase" onclick="writePassword()" checked />
             <label for="use-uppercase">USE UPPERCASE</label>
           </div>
           <div class="single-option">
+            <!-- Whether to use 0123456789 -->
             <input type="checkbox" id="use-numbers" onclick="writePassword()" checked />
             <label for="use-numbers">u23 num83r2</label>
           </div>
           <div class="single-option">
+            <!-- Whether to use !@#%^&*-_.? -->
             <input type="checkbox" id="use-special-chars" onclick="writePassword()" checked />
             <label for="use-special-chars">use special chars</label>
           </div>
         </div>
-
       </div>
-
       <div class="card-footer">
         <button id="generate" class="btn">Generate Password</button>
         <span id="hidden-warning-text" hidden>You need to choose SOMETHING!</span>
       </div>
     </div>
-
-
   </div>
   <script src="script.js"></script>
 </body>
